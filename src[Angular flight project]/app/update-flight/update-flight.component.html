@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <h2 style="text-align: center; color: rgb(113, 155, 181);">Update Flight</h2>
+  <hr/>
+    <div style="text-align:center;">
+      <form class="container" #reg="ngForm" (ngSubmit)="submit(reg)">
+        		
+                <input type="text" #flight_id="ngModel" ngModel name="flight_id" placeholder="Enter Id">
+              	<br> <br>
+                <input type="text" #flight_name="ngModel" ngModel name="flight_name" placeholder="Enter Flight Name">
+                <br> <br>
+                <input type="text" #flight_date="ngModel" ngModel name="flight_date" placeholder="Enter Date">
+                <br> <br>
+                <input type="text" #flight_source="ngModel" ngModel name="flight_source" placeholder="Enter Source">
+                <br> <br>
+                <input type="text" #flight_destination="ngModel" ngModel name="flight_destination" placeholder="Enter Destination">
+                <br> <br>
+                <input type="text" #flight_price="ngModel" ngModel name="flight_price" placeholder="Enter Price">
+                <br> <br>
+                <input type="text" #flight_duration="ngModel" ngModel name="flight_duration" placeholder="Enter Duration">
+                <br> <br>
+                <input type="text" #flight_capacity="ngModel" ngModel name="flight_capacity" placeholder="Enter Flight Capacity">
+                <br> <br>
+            <button type="submit" class="btn btn-primary">Update Flight</button>
+          </form>
+          <div>
+            <h2 *ngIf="fid1>0">Flight Updated successfully..</h2>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
